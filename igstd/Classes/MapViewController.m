@@ -7,16 +7,53 @@
 //
 
 #import "MapViewController.h"
-
+#import "DisplayMap.h"
 
 @implementation MapViewController
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-    [super viewDidLoad];
+	[super viewDidLoad];
+	[mapView setMapType:MKMapTypeStandard];
+	[mapView setZoomEnabled:YES];
+	[mapView setScrollEnabled:YES];
+	MKCoordinateRegion region = {{0.0,0.0},{0.0,0.0}};
+	region.center.latitude = 22.5234;
+	region.center.longitude = 88.123123;
+	region.span.longitudeDelta = 0.01f;
+	region.span.latitudeDelta = 0.01f;
+	[mapView setRegion:region animated:YES];
+	[mapView setDelegate:self];
+	
+	DisplayMap *ann=[[DisplayMap alloc]init];
+	
+	ann.title = @" Kolkata";
+	ann.subtitle = @"Mahatma Gandhi Road"; 
+	ann.coordinate = region.center; 
+	[mapView addAnnotation:ann];
 }
-*/
+
+
+-(MKAnnotationView *)mapView:(MKMapView *)mV viewForAnnotation:
+(id <MKAnnotation>)annotation {
+	MKPinAnnotationView *pinView = nil; 
+	if(annotation != mapView.userLocation) 
+	{
+		static NSString *defaultPinID = @"com.invasivecode.pin";
+		pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:defaultPinID];
+		if ( pinView == nil ) pinView = [[[MKPinAnnotationView alloc]
+										  initWithAnnotation:annotation reuseIdentifier:defaultPinID] autorelease];
+		pinView.pinColor = MKPinAnnotationColorRed; 
+		pinView.canShowCallout = YES;
+		pinView.animatesDrop = YES;
+	} 
+	else {
+		[mapView.userLocation setTitle:@"I am here"];
+	}
+	return pinView;
+}
+
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
