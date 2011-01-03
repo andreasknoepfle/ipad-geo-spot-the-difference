@@ -6,10 +6,35 @@
 			474ACDF312D23CAA004FD92F /* igstd */,
 		);
 	};
+	28216C950DB411BC00E5133A /* MapViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {678, 352}}";
+			sepNavSelRange = "{222, 0}";
+			sepNavVisRange = "{0, 222}";
+		};
+	};
+	28216C960DB411BC00E5133A /* MapViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {678, 572}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{323, 586}";
+		};
+	};
+	284F763F10B34E8A00D7BA5B /* ImageViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {678, 352}}";
+			sepNavSelRange = "{225, 0}";
+			sepNavVisRange = "{0, 225}";
+			sepNavWindowFrame = "{{138, 132}, {750, 558}}";
+		};
+	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 474ACDF312D23CAA004FD92F /* igstd */;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* igstd */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* igstd */,
+		);
 		codeSenseManager = 474ACE0612D23CCA004FD92F /* Code sense */;
 		executables = (
 			474ACDF312D23CAA004FD92F /* igstd */,
@@ -84,6 +109,7 @@
 		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
 		enableDebugStr = 1;
 		environmentEntries = (
 		);
@@ -108,5 +134,12 @@
 	474ACE0612D23CCA004FD92F /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	47CBED9812D2590B00993604 /* DisplayMap.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {678, 352}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 208}";
+		};
 	};
 }
