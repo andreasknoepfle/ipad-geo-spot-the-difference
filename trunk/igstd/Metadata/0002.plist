@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Konstanze</string>
+	<string>another Konstanze</string>
 	<key>ImagePath</key>
-	<string>0001.jpg</string>
+	<string>0002.jpg</string>
 	<key>Longitude</key>
-	<real>47.66073396981077</real>
+	<real>47.68073396981077</real>
 	<key>Latitude</key>
 	<real>9.181180000305176</real>
 	<key>Differences</key>
