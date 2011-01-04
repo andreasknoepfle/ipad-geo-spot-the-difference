@@ -1,3 +1,4 @@
 #summary Howto get Koordinates for Images.
+#labels image
 
 http://www.svensoltmann.de/maps-koordinaten.html
