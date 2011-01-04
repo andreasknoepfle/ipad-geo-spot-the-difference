@@ -57,7 +57,6 @@
 		
 		pinView.pinColor = MKPinAnnotationColorRed;
 		//pinView.animatesDrop = YES;
-		NSArray * str=[[NSBundle mainBundle] pathsForResourcesOfType:@"" inDirectory:@""];
 		UIImageView * leftIconView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"0002.jpg" ] getThumbnailWithSize:32]];
 		pinView.leftCalloutAccessoryView = leftIconView;
 	} 
