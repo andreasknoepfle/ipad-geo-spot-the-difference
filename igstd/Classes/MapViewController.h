@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import	<MapKit/MapKit.h>
+#import "DisplayMap.h"
+#import "UIImage+Resizing.h"
 
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>{
