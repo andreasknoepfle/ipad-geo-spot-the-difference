@@ -11,16 +11,17 @@
 
 @implementation MapViewController
 
+@synthesize mapView;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	[mapView setMapType:MKMapTypeStandard];
+	[mapView setMapType:MKMapTypeSatellite];
 	[mapView setZoomEnabled:YES];
 	[mapView setScrollEnabled:YES];
 	MKCoordinateRegion region = {{0.0,0.0},{0.0,0.0}};
-	region.center.latitude = 22.5234;
-	region.center.longitude = 88.123123;
+	region.center.latitude = 47.66073396981077;
+	region.center.longitude = 9.181180000305176;
 	region.span.longitudeDelta = 0.01f;
 	region.span.latitudeDelta = 0.01f;
 	[mapView setRegion:region animated:YES];
