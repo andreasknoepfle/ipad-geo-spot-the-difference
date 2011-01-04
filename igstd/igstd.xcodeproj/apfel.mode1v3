@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>474C4DEB12D3949000F8F2A9</string>
+						<string>474C4E2812D3A02A00F8F2A9</string>
 						<key>history</key>
 						<array>
 							<string>474C4DD412D3941600F8F2A9</string>
@@ -372,24 +372,25 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>474C4DEA12D3949000F8F2A9</string>
+										<string>474C4E2712D3A02A00F8F2A9</string>
 										<key>history</key>
 										<array>
 											<string>47CBEDD112D2615B00993604</string>
 											<string>47CBEDD312D2615B00993604</string>
 											<string>473D7F9412D28D7E00A909F2</string>
-											<string>474C4D1E12D34AE200F8F2A9</string>
 											<string>474C4D2A12D3549E00F8F2A9</string>
 											<string>474C4D5E12D37E1300F8F2A9</string>
-											<string>474C4D5F12D37E1300F8F2A9</string>
-											<string>474C4D6012D37E1300F8F2A9</string>
-											<string>474C4D6112D37E1300F8F2A9</string>
 											<string>474C4DC712D391CC00F8F2A9</string>
-											<string>474C4DD712D3944C00F8F2A9</string>
 											<string>474C4DD912D3944C00F8F2A9</string>
 											<string>474C4DE112D3947100F8F2A9</string>
 											<string>474C4DE212D3947100F8F2A9</string>
-											<string>474C4DE912D3949000F8F2A9</string>
+											<string>474C4DF712D39A6E00F8F2A9</string>
+											<string>474C4DF812D39A6E00F8F2A9</string>
+											<string>474C4DF912D39A6E00F8F2A9</string>
+											<string>474C4DFB12D39A6E00F8F2A9</string>
+											<string>474C4E0B12D39C7900F8F2A9</string>
+											<string>474C4E0C12D39C7900F8F2A9</string>
+											<string>474C4E0D12D39C7900F8F2A9</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -587,12 +588,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>474C4E2912D3A02A00F8F2A9</string>
+		<string>474C4E2412D39FF500F8F2A9</string>
 		<string>474C4DAC12D38CDE00F8F2A9</string>
 		<string>474C4CFD12D2941500F8F2A9</string>
 		<string>474C4CFB12D293AE00F8F2A9</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>47CBED9012D2469B00993604</string>
 		<string>474C4DDC12D3944C00F8F2A9</string>
 		<string>/Users/apfel/ipad-geo-spot-the-difference/igstd/igstd.xcodeproj</string>
 	</array>
@@ -613,14 +615,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>MapViewController.m</string>
+								<string>DisplayMap.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -637,6 +637,8 @@
 							<string>587pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -689,7 +691,7 @@
 			<key>WindowToolGUID</key>
 			<string>47CBED9012D2469B00993604</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

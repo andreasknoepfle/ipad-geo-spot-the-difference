@@ -10,10 +10,11 @@
 
 @implementation DisplayMap
 
-@synthesize coordinate,title,subtitle;
+@synthesize coordinate,title,internalName;
 
 -(void)dealloc{
 	[title release];
+	[internalName release];
 	[super dealloc];
 }
 @end
