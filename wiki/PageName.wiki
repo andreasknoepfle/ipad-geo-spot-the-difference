@@ -1,3 +1,0 @@
-#summary Howto get Koordinates for Images.
-
-http://www.svensoltmann.de/maps-koordinaten.html
