@@ -266,6 +266,8 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
+								<string>17F6085612D4A7C600D598AE</string>
+								<string>17F6085112D4A7B700D598AE</string>
 								<string>47CBED9B12D2591E00993604</string>
 								<string>47CBED9F12D2592700993604</string>
 								<string>1C37FABC05509CD000000102</string>
@@ -310,6 +312,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -324,17 +328,28 @@
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
 										<string>MapViewController.m</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>474C4EE212D4E76A00F8F2A9</string>
 										<key>history</key>
 										<array>
 											<string>47CBEDD112D2615B00993604</string>
 											<string>47CBEDD312D2615B00993604</string>
 											<string>473D7F9412D28D7E00A909F2</string>
-											<string>474C4D2A12D3549E00F8F2A9</string>
 											<string>474C4D5E12D37E1300F8F2A9</string>
 											<string>474C4DC712D391CC00F8F2A9</string>
-											<string>474C4E3612D3A6CA00F8F2A9</string>
-											<string>474C4E3712D3A6CA00F8F2A9</string>
-											<string>474C4E3812D3A6CA00F8F2A9</string>
+											<string>474C4EA712D4E41600F8F2A9</string>
+											<string>474C4EA912D4E41600F8F2A9</string>
+											<string>474C4EAA12D4E41600F8F2A9</string>
+											<string>474C4EAB12D4E41600F8F2A9</string>
+											<string>474C4EAC12D4E41600F8F2A9</string>
+											<string>474C4EAD12D4E41600F8F2A9</string>
+											<string>474C4EAE12D4E41600F8F2A9</string>
+											<string>474C4EAF12D4E41600F8F2A9</string>
+											<string>474C4EB312D4E41600F8F2A9</string>
+											<string>474C4EDB12D4E6D500F8F2A9</string>
+											<string>474C4EDC12D4E6D500F8F2A9</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -356,8 +371,6 @@
 							<string>543pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -534,9 +547,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
+		<string>474C4ED212D4E5C400F8F2A9</string>
+		<string>474C4EC412D4E4A400F8F2A9</string>
+		<string>47CBEDB112D25AD100993604</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>47CBED9012D2469B00993604</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/apfel/ipad-geo-spot-the-difference/igstd/igstd.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -561,7 +576,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>MapViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -578,6 +593,8 @@
 							<string>395pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -630,7 +647,7 @@
 			<key>WindowToolGUID</key>
 			<string>47CBED9012D2469B00993604</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -872,6 +889,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -917,7 +936,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
@@ -1385,7 +1404,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {500, 315}}</string>
 								<key>RubberWindowFrame</key>
-								<string>239 353 500 356 0 0 1024 746 </string>
+								<string>356 585 500 356 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCRefactoringModule</string>
@@ -1408,11 +1427,11 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>47CBEDB112D25AD100993604</string>
-				<string>47CBEDB212D25AD100993604</string>
+				<string>474C4E9C12D4E0FB00F8F2A9</string>
 				<string>47CBEDB012D25AD100993604</string>
 			</array>
 			<key>WindowString</key>
-			<string>239 353 500 356 0 0 1024 746 </string>
+			<string>356 585 500 356 0 0 1280 1002 </string>
 			<key>WindowToolGUID</key>
 			<string>47CBEDB112D25AD100993604</string>
 			<key>WindowToolIsVisible</key>

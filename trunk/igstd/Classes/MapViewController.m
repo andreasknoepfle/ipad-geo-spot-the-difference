@@ -21,24 +21,17 @@
 	[mapView setScrollEnabled:YES];
 	[mapView setDelegate:self];
 	
-
-	MKCoordinateRegion region = {{0.0,0.0},{0.0,0.0}};
-	region.center.latitude = 47.67073396981077;
-	region.center.longitude = 9.181180000305176;
-	SpotImage *ann=[[SpotImage alloc]init];
-	ann.title = @" Test";
-	ann.subtitle = @"0001"; 
-	ann.coordinate = region.center; 
-	[mapView addAnnotation:ann];
 	
-	MKCoordinateRegion region2 = {{0.0,0.0},{0.0,0.0}};
-	region2.center.latitude = 47.66073396981077;
-	region2.center.longitude = 9.181180000305176;
-	ann=[[SpotImage alloc]init];
-	ann.title = @" Kolkata";
-	ann.subtitle = @"0002"; 
-	ann.coordinate = region2.center; 
+
+	
+	SpotImage *ann=[[SpotImage alloc]initWithLongitude:9.181180000305176 andLatitude:47.67073396981077 
+							andTitle: @"Konstanze" andSubtitle:@"Nice Work" andImageName:@"0001.jpg"];
+	
+	SpotImage *ann2=[[SpotImage alloc]initWithLongitude:9.181180000305176 andLatitude:47.66073396981077 
+											  andTitle: @"Konstanze2" andSubtitle:@"Nice Work2" andImageName:@"0002.jpg"];
+	
 	[mapView addAnnotation:ann];
+	[mapView addAnnotation:ann2];
 	
 	//Start Point
 	
@@ -52,18 +45,32 @@
 	MKPinAnnotationView *pinView = nil; 
 	if(annotation != mapView.userLocation) 
 	{
+		SpotImage * spotimage=(SpotImage * )annotation;
 		pinView = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil] autorelease];
 		pinView.canShowCallout = YES;
 		
 		pinView.pinColor = MKPinAnnotationColorRed;
-		//pinView.animatesDrop = YES;
-		UIImageView * leftIconView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"0002.jpg" ] getThumbnailWithSize:32]];
+		pinView.animatesDrop = YES;
+		UIImageView * leftIconView = [[UIImageView alloc] initWithImage:[spotimage.image getThumbnailWithSize:32]];
 		pinView.leftCalloutAccessoryView = leftIconView;
+		UIButton * rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+		rightButton.tag = (int)spotimage; 
+		[rightButton addTarget:self action:@selector(annotationViewClick:) forControlEvents:UIControlEventTouchUpInside];
+		pinView.rightCalloutAccessoryView = rightButton;
 	} 
 	else {
-		[mapView.userLocation setTitle:@"I am here"];
+		[mapView.userLocation setTitle:@"User Position"];
 	}
 	return pinView;
+}
+
+- (IBAction) annotationViewClick:(id) sender {
+	
+	SpotImage * spotimage = (SpotImage*)((UIControl*)sender).tag;
+	NSLog(@"Clicked");
+	
+	NSLog(spotimage.title);
+	
 }
 
 
