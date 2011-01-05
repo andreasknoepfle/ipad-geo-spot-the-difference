@@ -9,8 +9,15 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ImageViewController : UIViewController {
-
+@interface ImageViewController : UIViewController <UIScrollViewDelegate> {
+	UIImageView *imageView;
+	UIScrollView *scrollView;
 }
+
+@property (nonatomic, retain) UIImageView *imageView;
+@property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+
+- (void) setImage: (NSString*) fileName;
+- (void) updateScrollView;
 
 @end
