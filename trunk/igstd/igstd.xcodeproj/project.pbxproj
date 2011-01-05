@@ -19,7 +19,7 @@
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
 		474C4D7E12D382AA00F8F2A9 /* UIImage+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 474C4D7D12D382AA00F8F2A9 /* UIImage+Resizing.m */; };
-		47CBED9A12D2590B00993604 /* DisplayMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBED9912D2590B00993604 /* DisplayMap.m */; };
+		47CBED9A12D2590B00993604 /* SpotImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBED9912D2590B00993604 /* SpotImage.m */; };
 		47CBED9C12D2591E00993604 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47CBED9B12D2591E00993604 /* CoreLocation.framework */; };
 		47CBEDA012D2592700993604 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47CBED9F12D2592700993604 /* MapKit.framework */; };
 		47CBEDC412D25B2400993604 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CBEDC312D25B2400993604 /* MapView.xib */; };
@@ -46,8 +46,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		474C4D7C12D382AA00F8F2A9 /* UIImage+Resizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resizing.h"; sourceTree = "<group>"; };
 		474C4D7D12D382AA00F8F2A9 /* UIImage+Resizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resizing.m"; sourceTree = "<group>"; };
-		47CBED9812D2590B00993604 /* DisplayMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayMap.h; sourceTree = "<group>"; };
-		47CBED9912D2590B00993604 /* DisplayMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayMap.m; sourceTree = "<group>"; };
+		47CBED9812D2590B00993604 /* SpotImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotImage.h; sourceTree = "<group>"; };
+		47CBED9912D2590B00993604 /* SpotImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotImage.m; sourceTree = "<group>"; };
 		47CBED9B12D2591E00993604 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		47CBED9F12D2592700993604 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		47CBEDC312D25B2400993604 /* MapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
@@ -80,8 +80,8 @@
 				28216C960DB411BC00E5133A /* MapViewController.m */,
 				284F763F10B34E8A00D7BA5B /* ImageViewController.h */,
 				284F764010B34E8A00D7BA5B /* ImageViewController.m */,
-				47CBED9812D2590B00993604 /* DisplayMap.h */,
-				47CBED9912D2590B00993604 /* DisplayMap.m */,
+				47CBED9812D2590B00993604 /* SpotImage.h */,
+				47CBED9912D2590B00993604 /* SpotImage.m */,
 				474C4D7C12D382AA00F8F2A9 /* UIImage+Resizing.h */,
 				474C4D7D12D382AA00F8F2A9 /* UIImage+Resizing.m */,
 				17F6081812D49C1900D598AE /* ImageManager.h */,
@@ -212,7 +212,7 @@
 				1D3623260D0F684500981E51 /* igstdAppDelegate.m in Sources */,
 				28216C970DB411BC00E5133A /* MapViewController.m in Sources */,
 				284F764110B34E8A00D7BA5B /* ImageViewController.m in Sources */,
-				47CBED9A12D2590B00993604 /* DisplayMap.m in Sources */,
+				47CBED9A12D2590B00993604 /* SpotImage.m in Sources */,
 				474C4D7E12D382AA00F8F2A9 /* UIImage+Resizing.m in Sources */,
 				17F6081A12D49C1900D598AE /* ImageManager.m in Sources */,
 			);

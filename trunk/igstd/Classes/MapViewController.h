@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import	<MapKit/MapKit.h>
-#import "DisplayMap.h"
+#import "SpotImage.h"
 #import "UIImage+Resizing.h"
 
 

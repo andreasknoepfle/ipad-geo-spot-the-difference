@@ -25,18 +25,18 @@
 	MKCoordinateRegion region = {{0.0,0.0},{0.0,0.0}};
 	region.center.latitude = 47.67073396981077;
 	region.center.longitude = 9.181180000305176;
-	DisplayMap *ann=[[DisplayMap alloc]init];
+	SpotImage *ann=[[SpotImage alloc]init];
 	ann.title = @" Test";
-	ann.internalName = @"0001"; 
+	ann.subtitle = @"0001"; 
 	ann.coordinate = region.center; 
 	[mapView addAnnotation:ann];
 	
 	MKCoordinateRegion region2 = {{0.0,0.0},{0.0,0.0}};
 	region2.center.latitude = 47.66073396981077;
 	region2.center.longitude = 9.181180000305176;
-	ann=[[DisplayMap alloc]init];
+	ann=[[SpotImage alloc]init];
 	ann.title = @" Kolkata";
-	ann.internalName = @"0002"; 
+	ann.subtitle = @"0002"; 
 	ann.coordinate = region2.center; 
 	[mapView addAnnotation:ann];
 	
