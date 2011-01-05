@@ -19,6 +19,9 @@
 	double longitude;
 	
 }
+-(id)initWithLongitude:(double)longitude andLatitude:(double)latitude andTitle:(NSString *)title 
+		   andSubtitle:(NSString *)subtitle andImageName:(NSString *)imageName;
+
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate; 
 @property (nonatomic, copy) NSString *title; 
 @property (nonatomic, copy) NSString *subtitle;
