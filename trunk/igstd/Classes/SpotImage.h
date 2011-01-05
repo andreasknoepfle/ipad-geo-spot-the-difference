@@ -10,13 +10,20 @@
 #import <MapKit/MapKit.h>
 
 
-@interface DisplayMap : NSObject <MKAnnotation> {
+@interface SpotImage : NSObject <MKAnnotation> {
 	CLLocationCoordinate2D coordinate; 
-	NSString *title; 
-	NSString *internalName;
+	NSString * title; 
+	NSString * subtitle;
+	UIImage *image;
+	double latitude;
+	double longitude;
+	
 }
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate; 
 @property (nonatomic, copy) NSString *title; 
-@property (nonatomic, copy) NSString *internalName;
+@property (nonatomic, copy) NSString *subtitle;
+@property (nonatomic, copy) UIImage *image;
+@property (nonatomic, assign) double latitude;
+@property (nonatomic, assign) double longitude;
 
 @end

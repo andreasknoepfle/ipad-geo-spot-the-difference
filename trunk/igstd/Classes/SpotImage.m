@@ -6,15 +6,16 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "DisplayMap.h"
+#import "SpotImage.h"
 
-@implementation DisplayMap
+@implementation SpotImage
 
-@synthesize coordinate,title,internalName;
+@synthesize coordinate,title,subtitle,image,latitude,longitude;
 
 -(void)dealloc{
 	[title release];
-	[internalName release];
+	[subtitle release];
+	[image release];
 	[super dealloc];
 }
 @end
