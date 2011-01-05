@@ -7,17 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Foundation/NSKeyedArchiver.h>
 #import <MapKit/MapKit.h>
 
 
-@interface SpotImage : NSObject <MKAnnotation> {
+@interface SpotImage : NSObject <MKAnnotation, NSCoding> {
 	CLLocationCoordinate2D coordinate; 
 	NSString * title; 
 	NSString * subtitle;
-	UIImage *image;
-	double latitude;
-	double longitude;
-	
+	UIImage *image;	
 }
 -(id)initWithLongitude:(double)longitude andLatitude:(double)latitude andTitle:(NSString *)title 
 		   andSubtitle:(NSString *)subtitle andImageName:(NSString *)imageName;
@@ -26,7 +24,5 @@
 @property (nonatomic, copy) NSString *title; 
 @property (nonatomic, copy) NSString *subtitle;
 @property (nonatomic, copy) UIImage *image;
-@property (nonatomic, assign) double latitude;
-@property (nonatomic, assign) double longitude;
 
 @end
