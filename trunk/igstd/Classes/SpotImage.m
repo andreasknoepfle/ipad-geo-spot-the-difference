@@ -8,6 +8,7 @@
 
 #import "SpotImage.h"
 #import "Foundation/NSDictionary.h"
+#import "Difference.h"
 
 @implementation SpotImage
 
@@ -26,6 +27,7 @@
 		self.title=_title;
 		self.subtitle=_subtitle;
 		self.image=[UIImage imageNamed:imageName];
+		differences = [[NSMutableArray alloc] init];
 	}
 	return self;
 }
@@ -50,6 +52,20 @@
 	region.center.latitude = [latitude doubleValue];
 	region.center.longitude = [longitude doubleValue];
 	self.coordinate = region.center;
+	
+	// Fehlerpunkte einlesen
+	NSArray* diffs = [NSArray arrayWithObject:[data objectForKey:@"Differences"]];
+	for(NSDictionary *dict in diffs)
+	{
+		int x = [[data objectForKey:@"X"] intValue];
+		int y = [[data objectForKey:@"Y"] intValue];
+		int width = [[data objectForKey:@"Width"] intValue];
+		int height = [[data objectForKey:@"Height"] intValue];
+		
+		Difference* difference = [[Difference alloc] initWithX:x andY:y andWidth:width andHeight:height];
+		
+		[differences addObject:difference];
+	}
 	
 	return self;
 }

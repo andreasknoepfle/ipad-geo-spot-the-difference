@@ -16,6 +16,7 @@
 	NSString * title; 
 	NSString * subtitle;
 	UIImage *image;	
+	NSMutableArray * differences;
 }
 -(id)initWithLongitude:(double)longitude andLatitude:(double)latitude andTitle:(NSString *)title 
 		   andSubtitle:(NSString *)subtitle andImageName:(NSString *)imageName;

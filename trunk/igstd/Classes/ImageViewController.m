@@ -12,7 +12,7 @@
 
 @implementation ImageViewController
 
-@synthesize scrollView, imageView;
+@synthesize scrollView, imageView, spotImage;
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -30,9 +30,9 @@
 }
 
 
-- (void) setSpotImage: (SpotImage*)spotImage{
+- (void) showSpotImage{	
 	// ImageView mit einem Bild erstellen
-	UIImageView	*tempImageView = [[UIImageView alloc] initWithImage:spotImage];
+	UIImageView	*tempImageView = [[UIImageView alloc] initWithImage:spotImage.image];
 	[self setImageView: tempImageView];
 	[tempImageView release];
 	
