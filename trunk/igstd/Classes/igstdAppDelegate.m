@@ -26,6 +26,14 @@
     [self.window addSubview:tabBarController.view];
     [self.window makeKeyAndVisible];
 	
+	//FIXME 
+	UIViewController * mapView = [self.tabBarController.viewControllers objectAtIndex:0];
+	mapView.tabBarItem.image = [UIImage imageNamed:@"world.png"];
+	UIViewController * imageView = [self.tabBarController.viewControllers objectAtIndex:1];
+	imageView.tabBarItem.image = [UIImage imageNamed:@"photos.png"];
+	UIViewController * aboutView = [self.tabBarController.viewControllers objectAtIndex:2];
+	aboutView.tabBarItem.image = [UIImage imageNamed:@"lightbulb.png"];
+	
     return YES;
 }
 
