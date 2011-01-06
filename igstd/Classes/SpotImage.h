@@ -11,7 +11,7 @@
 #import <MapKit/MapKit.h>
 
 
-@interface SpotImage : NSObject <MKAnnotation, NSCoding> {
+@interface SpotImage : NSObject <MKAnnotation> {
 	CLLocationCoordinate2D coordinate; 
 	NSString * title; 
 	NSString * subtitle;
@@ -19,6 +19,8 @@
 }
 -(id)initWithLongitude:(double)longitude andLatitude:(double)latitude andTitle:(NSString *)title 
 		   andSubtitle:(NSString *)subtitle andImageName:(NSString *)imageName;
+
+-(id)initWithPlist:(NSString*)path;
 
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate; 
 @property (nonatomic, copy) NSString *title; 

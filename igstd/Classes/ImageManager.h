@@ -10,10 +10,11 @@
 
 
 @interface ImageManager : NSObject {
-
+	NSMutableArray* spotImages;
 }
 
 +(ImageManager*) getImageManager;
 
+@property (nonatomic, retain) NSMutableArray* spotImages; 
 
 @end

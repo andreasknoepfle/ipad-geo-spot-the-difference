@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Title</key>
+	<string>Konstanz 2</string>
 	<key>Description</key>
-	<string>another Konstanze</string>
+	<string>the town</string>
 	<key>ImagePath</key>
 	<string>0002.jpg</string>
 	<key>Longitude</key>

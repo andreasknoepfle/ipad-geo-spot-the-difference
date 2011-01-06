@@ -18,11 +18,6 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-	ImageManager* imageManager = [ImageManager getImageManager];
-		
-	[self setImage: @"0001.jpg"];
-	[self updateScrollView];
 }	
 
 - (void) updateScrollView{
@@ -35,14 +30,9 @@
 }
 
 
-- (void) setImage: (NSString*)fileName{
-	
-	// Bild erstellen
-	NSString *imageName = fileName;
-	UIImage *image = [UIImage imageNamed:imageName];
-	
+- (void) setSpotImage: (SpotImage*)spotImage{
 	// ImageView mit einem Bild erstellen
-	UIImageView	*tempImageView = [[UIImageView alloc] initWithImage:image];
+	UIImageView	*tempImageView = [[UIImageView alloc] initWithImage:spotImage];
 	[self setImageView: tempImageView];
 	[tempImageView release];
 	
@@ -50,6 +40,8 @@
 	// damit das Bild komplett angezeigt wird
 	imageView.frame = scrollView.bounds; //CGRectMake(0,0, scrollView.contentSize.width, scrollView.contentSize.height);
 	imageView.contentMode = UIViewContentModeScaleAspectFit;
+	
+	[self updateScrollView];
 }
 							  
 

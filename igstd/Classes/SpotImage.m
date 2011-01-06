@@ -7,6 +7,7 @@
 //
 
 #import "SpotImage.h"
+#import "Foundation/NSDictionary.h"
 
 @implementation SpotImage
 
@@ -29,28 +30,31 @@
 	return self;
 }
 
--(id) encodeWithCoder:(NSCoder *)encoder
-{
-	// nichts machen, da bisher nicht serialisiert werden muss
-	return NULL;
+-(id) initWithPlist:(NSString *)path{
+	self = [super init];
+	
+	NSDictionary* data = [NSDictionary dictionaryWithContentsOfFile:path];
+	
+	// Beschriftung einlesen
+	self.title = [data objectForKey:@"Title"];
+	self.subtitle = [data objectForKey:@"Description"];
+
+	// Bild einlesen
+	NSString* imageName = [data objectForKey:@"ImagePath"];
+	self.image = [UIImage imageNamed:imageName];
+	
+	// Koordinaten einlesen
+	NSNumber* latitude = [data objectForKey:@"Latitude"];
+	NSNumber* longitude = [data objectForKey:@"Longitude"];
+	MKCoordinateRegion region = {{0.0,0.0},{0.0,0.0}};
+	region.center.latitude = [latitude doubleValue];
+	region.center.longitude = [longitude doubleValue];
+	self.coordinate = region.center;
+	
+	return self;
 }
 
 
--(id) initWithCoder:(NSCoder *)decoder
-{
-	CLLocationCoordinate2D coordinate; 
-	NSString * title; 
-	NSString * subtitle;
-	
-	
-	//NSString* imageName = 
-	
-	//image = [UIImage imageNamed:imageName];
-	//latitude = [[decoder decodeDoubleForKey:@"Latitude"]];
-	//longitude = [[decoder decodeDoubleForKey:@"Longitude"]];
-	
-	return NULL;
-}
 
 -(void)dealloc{
 	[title release];
