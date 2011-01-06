@@ -7,6 +7,7 @@
 //
 
 #import "MapViewController.h"
+#import "ImageManager.h"
 
 
 @implementation MapViewController
@@ -21,22 +22,9 @@
 	[mapView setScrollEnabled:YES];
 	[mapView setDelegate:self];
 	
-	
-
-	
-	SpotImage *ann=[[SpotImage alloc]initWithLongitude:9.181180000305176 andLatitude:47.67073396981077 
-							andTitle: @"Konstanze" andSubtitle:@"Nice Work" andImageName:@"0001.jpg"];
-	
-	SpotImage *ann2=[[SpotImage alloc]initWithLongitude:9.181180000305176 andLatitude:47.66073396981077 
-											  andTitle: @"Konstanze2" andSubtitle:@"Nice Work2" andImageName:@"0002.jpg"];
-	
-	[mapView addAnnotation:ann];
-	[mapView addAnnotation:ann2];
-	
-	//Start Point
-	
-	
-	
+	for(SpotImage* spotImage in [[ImageManager getImageManager] spotImages]){
+		[mapView addAnnotation:spotImage];
+	}	
 }
 
 

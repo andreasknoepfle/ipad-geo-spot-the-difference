@@ -7,9 +7,13 @@
 //
 
 #import "ImageManager.h"
+#import "SpotImage.h"
 
 
 @implementation ImageManager
+
+@synthesize spotImages;
+
 static ImageManager *imageManager = nil;
 
 
@@ -38,19 +42,24 @@ static ImageManager *imageManager = nil;
 -(id) init{
 	self = [super init];
 	if(self != nil) {
+		spotImages = [[NSMutableArray alloc] init];
+		
+		// FileManager erstellen um den Inhalt eines Verzeichnisses auszulesen
 		NSFileManager *fileManager = [NSFileManager defaultManager];
 		
-		//Pfad zu den Metadatan
-		NSString* path = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/Metadata"];
+		// Pfad zu den Metadatan
+		NSString* path = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/Metadata/"];
 		
 		// Alle Dateien ermitteln
 		NSArray* files = [fileManager contentsOfDirectoryAtPath:path error:NULL];
 		
-		// Zum testen ausgeben
-		NSLog(path);
 		for( NSString* file in files)
 		{
-			NSLog(file);
+			if([file hasSuffix:@".plist"]){
+				NSString* completePath = [path stringByAppendingString:file];
+				SpotImage* spotImage = [[SpotImage alloc] initWithPlist:completePath];
+				[spotImages addObject:spotImage];
+			}
 		}
 		
 	}
