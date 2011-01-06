@@ -9,9 +9,9 @@
 	<key>ImagePath</key>
 	<string>0002.jpg</string>
 	<key>Longitude</key>
-	<real>47.68073396981077</real>
-	<key>Latitude</key>
 	<real>9.181180000305176</real>
+	<key>Latitude</key>
+	<real>47.68073396981077</real>
 	<key>Differences</key>
 	<array>
 		<dict>
