@@ -51,9 +51,9 @@
 	};
 	28216C960DB411BC00E5133A /* MapViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {957, 1183}}";
+			sepNavIntBoundsRect = "{{0, 0}, {957, 1248}}";
 			sepNavSelRange = "{2142, 0}";
-			sepNavVisRange = "{1153, 1321}";
+			sepNavVisRange = "{1687, 966}";
 			sepNavWindowFrame = "{{403, 329}, {750, 558}}";
 		};
 	};
@@ -198,6 +198,11 @@
 			47AB8D8012D612B900E03E51 /* PlistBookmark */ = 47AB8D8012D612B900E03E51 /* PlistBookmark */;
 			47AB8D8112D612B900E03E51 /* PBXTextBookmark */ = 47AB8D8112D612B900E03E51 /* PBXTextBookmark */;
 			47AB8D8212D612B900E03E51 /* PBXTextBookmark */ = 47AB8D8212D612B900E03E51 /* PBXTextBookmark */;
+			47AB8D9A12D616BA00E03E51 /* PBXTextBookmark */ = 47AB8D9A12D616BA00E03E51 /* PBXTextBookmark */;
+			47AB8D9B12D616BA00E03E51 /* PBXBookmark */ = 47AB8D9B12D616BA00E03E51 /* PBXBookmark */;
+			47AB8D9D12D616BA00E03E51 /* PlistBookmark */ = 47AB8D9D12D616BA00E03E51 /* PlistBookmark */;
+			47AB8D9E12D616BA00E03E51 /* PlistBookmark */ = 47AB8D9E12D616BA00E03E51 /* PlistBookmark */;
+			47AB8D9F12D616BA00E03E51 /* PlistBookmark */ = 47AB8D9F12D616BA00E03E51 /* PlistBookmark */;
 			47CBEDD112D2615B00993604 = 47CBEDD112D2615B00993604 /* PBXTextBookmark */;
 			47CBEDD312D2615B00993604 = 47CBEDD312D2615B00993604 /* PBXTextBookmark */;
 		};
@@ -609,6 +614,59 @@
 		rType = 0;
 		vrLen = 1321;
 		vrLoc = 1153;
+	};
+	47AB8D9A12D616BA00E03E51 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28216C960DB411BC00E5133A /* MapViewController.m */;
+		name = "MapViewController.m: 68";
+		rLen = 0;
+		rLoc = 2142;
+		rType = 0;
+		vrLen = 1012;
+		vrLoc = 1687;
+	};
+	47AB8D9B12D616BA00E03E51 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 47AB8D9C12D616BA00E03E51 /* 0001.jpg */;
+	};
+	47AB8D9C12D616BA00E03E51 /* 0001.jpg */ = {
+		isa = PBXFileReference;
+		name = 0001.jpg;
+		path = "/Users/apfel/ipad-geo-spot-the-difference/igstd/Images/0001.jpg";
+		sourceTree = "<absolute>";
+	};
+	47AB8D9D12D616BA00E03E51 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 474C4EEA12D4E82200F8F2A9 /* 0002.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/apfel/ipad-geo-spot-the-difference/igstd/Metadata/0002.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	47AB8D9E12D616BA00E03E51 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 474C4EA812D4E41600F8F2A9 /* 0001.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/apfel/ipad-geo-spot-the-difference/igstd/Metadata/0001.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	47AB8D9F12D616BA00E03E51 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 474C4EA812D4E41600F8F2A9 /* 0001.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/apfel/ipad-geo-spot-the-difference/igstd/Metadata/0001.plist";
+		rLen = 0;
+		rLoc = 2147483647;
 	};
 	47CBED9812D2590B00993604 /* SpotImage.h */ = {
 		uiCtxt = {

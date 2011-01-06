@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -276,8 +278,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
-									<integer>1</integer>
+									<integer>19</integer>
+									<integer>18</integer>
+									<integer>17</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -312,14 +315,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>MapViewController.m</string>
+								<string>0001.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,11 +328,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>MapViewController.m</string>
+										<string>0001.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>47AB8D8212D612B900E03E51</string>
+										<string>47AB8D9F12D616BA00E03E51</string>
 										<key>history</key>
 										<array>
 											<string>47CBEDD112D2615B00993604</string>
@@ -346,12 +347,13 @@
 											<string>474C4EAF12D4E41600F8F2A9</string>
 											<string>474C4EB312D4E41600F8F2A9</string>
 											<string>47AB8D5D12D60D9200E03E51</string>
-											<string>47AB8D5E12D60D9200E03E51</string>
 											<string>47AB8D6012D60D9200E03E51</string>
 											<string>47AB8D6112D60D9200E03E51</string>
 											<string>47AB8D6212D60D9200E03E51</string>
-											<string>47AB8D8012D612B900E03E51</string>
-											<string>47AB8D8112D612B900E03E51</string>
+											<string>47AB8D9A12D616BA00E03E51</string>
+											<string>47AB8D9B12D616BA00E03E51</string>
+											<string>47AB8D9D12D616BA00E03E51</string>
+											<string>47AB8D9E12D616BA00E03E51</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
