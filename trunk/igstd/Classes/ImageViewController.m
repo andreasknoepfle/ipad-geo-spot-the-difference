@@ -20,13 +20,20 @@
     [super viewDidLoad];
 }	
 
-- (void) updateScrollView{
+- (void) updateScrollView{	
 	scrollView.contentSize = CGSizeMake(imageView.frame.size.width, imageView.frame.size.height);
 	scrollView.maximumZoomScale = 4.0;
 	scrollView.minimumZoomScale = 0.1;
 	scrollView.clipsToBounds = YES;
 	scrollView.delegate = self;
 	[scrollView addSubview:imageView];
+}
+
+- (void) resetScrollView{
+	// Alle vorherigen Subviews loeschen
+	for (UIView *view in [scrollView subviews]) {
+		[view removeFromSuperview];
+	}
 }
 
 

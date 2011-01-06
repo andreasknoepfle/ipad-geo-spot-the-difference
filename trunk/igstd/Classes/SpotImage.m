@@ -42,8 +42,9 @@
 	self.subtitle = [data objectForKey:@"Description"];
 
 	// Bild einlesen
+	NSString* imagePath = [[[NSBundle mainBundle]  resourcePath] stringByAppendingString:@"/Images/"];
 	NSString* imageName = [data objectForKey:@"ImagePath"];
-	self.image = [UIImage imageNamed:imageName];
+	self.image = [UIImage imageWithContentsOfFile:[imagePath stringByAppendingString: imageName]];
 	
 	// Koordinaten einlesen
 	NSNumber* latitude = [data objectForKey:@"Latitude"];
