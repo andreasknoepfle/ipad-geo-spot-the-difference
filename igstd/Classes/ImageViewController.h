@@ -8,15 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "SpotImage.h"
+#import "UITouchImageView.h"
 
 
 @interface ImageViewController : UIViewController <UIScrollViewDelegate> {
-	UIImageView *imageView;
+	UITouchImageView *imageView;
 	UIScrollView *scrollView;
 	SpotImage *spotImage;
 }
 
-@property (nonatomic, retain) UIImageView *imageView;
+@property (nonatomic, retain) UITouchImageView *imageView;
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, retain) SpotImage* spotImage;
 
