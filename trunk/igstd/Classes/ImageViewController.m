@@ -34,10 +34,14 @@
 	for (UIView *view in [scrollView subviews]) {
 		[view removeFromSuperview];
 	}
+	
+	scrollView.bounds = scrollView.frame;
 }
 
 
 - (void) showSpotImage{	
+	[self resetScrollView];
+	
 	// ImageView mit einem Bild erstellen
 	UIImageView	*tempImageView = [[UIImageView alloc] initWithImage:spotImage.image];
 	[self setImageView: tempImageView];
