@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17882E7A12D5DF2C00D0159D /* Difference.m in Sources */ = {isa = PBXBuildFile; fileRef = 17882E7912D5DF2C00D0159D /* Difference.m */; };
+		17882F2A12D61E4000D0159D /* UITouchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17882F2912D61E4000D0159D /* UITouchImageView.m */; };
 		17F6081A12D49C1900D598AE /* ImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F6081912D49C1900D598AE /* ImageManager.m */; };
 		17F6085512D4A7B700D598AE /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 17F6085112D4A7B700D598AE /* Images */; };
 		17F6085A12D4A7C600D598AE /* Metadata in Resources */ = {isa = PBXBuildFile; fileRef = 17F6085612D4A7C600D598AE /* Metadata */; };
@@ -30,6 +31,8 @@
 /* Begin PBXFileReference section */
 		17882E7812D5DF2C00D0159D /* Difference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Difference.h; sourceTree = "<group>"; };
 		17882E7912D5DF2C00D0159D /* Difference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Difference.m; sourceTree = "<group>"; };
+		17882F2812D61E4000D0159D /* UITouchImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchImageView.h; sourceTree = "<group>"; };
+		17882F2912D61E4000D0159D /* UITouchImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITouchImageView.m; sourceTree = "<group>"; };
 		17F6081812D49C1900D598AE /* ImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageManager.h; sourceTree = "<group>"; };
 		17F6081912D49C1900D598AE /* ImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageManager.m; sourceTree = "<group>"; };
 		17F6085112D4A7B700D598AE /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 				17F6081912D49C1900D598AE /* ImageManager.m */,
 				17882E7812D5DF2C00D0159D /* Difference.h */,
 				17882E7912D5DF2C00D0159D /* Difference.m */,
+				17882F2812D61E4000D0159D /* UITouchImageView.h */,
+				17882F2912D61E4000D0159D /* UITouchImageView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				474C4D7E12D382AA00F8F2A9 /* UIImage+Resizing.m in Sources */,
 				17F6081A12D49C1900D598AE /* ImageManager.m in Sources */,
 				17882E7A12D5DF2C00D0159D /* Difference.m in Sources */,
+				17882F2A12D61E4000D0159D /* UITouchImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

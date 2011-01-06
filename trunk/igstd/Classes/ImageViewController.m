@@ -35,6 +35,7 @@
 		[view removeFromSuperview];
 	}
 	
+	//Bounds zuruecksetzen
 	scrollView.bounds = scrollView.frame;
 }
 
@@ -43,7 +44,7 @@
 	[self resetScrollView];
 	
 	// ImageView mit einem Bild erstellen
-	UIImageView	*tempImageView = [[UIImageView alloc] initWithImage:spotImage.image];
+	UITouchImageView *tempImageView = [[UITouchImageView alloc] initWithImage:spotImage.image];
 	[self setImageView: tempImageView];
 	[tempImageView release];
 	
@@ -51,6 +52,8 @@
 	// damit das Bild komplett angezeigt wird
 	imageView.frame = scrollView.bounds; //CGRectMake(0,0, scrollView.contentSize.width, scrollView.contentSize.height);
 	imageView.contentMode = UIViewContentModeScaleAspectFit;
+	
+	
 	
 	[self updateScrollView];
 }
