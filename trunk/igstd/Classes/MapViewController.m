@@ -8,6 +8,8 @@
 
 #import "MapViewController.h"
 #import "ImageManager.h"
+#import "igstdAppDelegate.h"
+#import "ImageViewController.h"
 
 
 @implementation MapViewController
@@ -58,6 +60,12 @@
 	NSLog(@"Clicked");
 	
 	NSLog(spotimage.title);
+	igstdAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+	ImageViewController *image =(ImageViewController *) [delegate.tabBarController.viewControllers objectAtIndex:1]; 
+	
+	delegate.tabBarController.selectedIndex = 1;
+	[image setSpotImage:spotimage];
+	[image showSpotImage];
 	
 }
 
