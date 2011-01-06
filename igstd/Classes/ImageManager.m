@@ -48,7 +48,7 @@ static ImageManager *imageManager = nil;
 		NSFileManager *fileManager = [NSFileManager defaultManager];
 		
 		// Pfad zu den Metadatan
-		NSString* path = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/Metadata/"];
+		NSString* path = [[[NSBundle mainBundle]  resourcePath] stringByAppendingString:@"/Metadata/"];
 		
 		// Alle Dateien ermitteln
 		NSArray* files = [fileManager contentsOfDirectoryAtPath:path error:NULL];
