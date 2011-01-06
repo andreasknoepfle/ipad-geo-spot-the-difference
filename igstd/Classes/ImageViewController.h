@@ -22,5 +22,6 @@
 
 - (void) updateScrollView;
 - (void) showSpotImage;
+- (void) resetScrollView;
 
 @end
