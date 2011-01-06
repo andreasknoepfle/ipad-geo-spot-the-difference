@@ -2,7 +2,7 @@
 //  ImageManager.m
 //  igstd
 //
-//  Created by Markus Holoch on 05.01.11.
+//  Created by Mathias Hodler on 05.01.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 

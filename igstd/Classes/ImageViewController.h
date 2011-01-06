@@ -18,8 +18,9 @@
 
 @property (nonatomic, retain) UIImageView *imageView;
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, retain) SpotImage* spotImage;
 
 - (void) updateScrollView;
-- (void) setSpotImage:(SpotImage*)spotImage;
+- (void) showSpotImage;
 
 @end

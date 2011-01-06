@@ -15,30 +15,50 @@
 	<key>Differences</key>
 	<array>
 		<dict>
+			<key>Height</key>
+			<integer>20</integer>
+			<key>Width</key>
+			<integer>20</integer>
 			<key>X</key>
 			<integer>369</integer>
 			<key>Y</key>
 			<integer>507</integer>
 		</dict>
 		<dict>
+			<key>Width</key>
+			<integer>20</integer>
+			<key>Height</key>
+			<integer>20</integer>
 			<key>X</key>
 			<integer>1551</integer>
 			<key>Y</key>
 			<integer>600</integer>
 		</dict>
 		<dict>
+			<key>Width</key>
+			<integer>20</integer>
+			<key>Height</key>
+			<string>20</string>
 			<key>X</key>
 			<integer>600</integer>
 			<key>Y</key>
 			<integer>2193</integer>
 		</dict>
 		<dict>
+			<key>Width</key>
+			<integer>20</integer>
+			<key>Height</key>
+			<integer>20</integer>
 			<key>X</key>
 			<integer>2187</integer>
 			<key>Y</key>
 			<integer>2099</integer>
 		</dict>
 		<dict>
+			<key>Width</key>
+			<integer>20</integer>
+			<key>Height</key>
+			<integer>20</integer>
 			<key>X</key>
 			<integer>1604</integer>
 			<key>Y</key>
