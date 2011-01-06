@@ -21,6 +21,11 @@
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
 		474C4D7E12D382AA00F8F2A9 /* UIImage+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 474C4D7D12D382AA00F8F2A9 /* UIImage+Resizing.m */; };
+		47AB8DB212D61D6400E03E51 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47AB8DB012D61D6400E03E51 /* AboutView.xib */; };
+		47AB8DC012D620E300E03E51 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AB8DBF12D620E300E03E51 /* AboutViewController.m */; };
+		47B3D18312D626E3007B9BF2 /* world.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3D18212D626E3007B9BF2 /* world.png */; };
+		47B3D18512D626F6007B9BF2 /* photos.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3D18412D626F6007B9BF2 /* photos.png */; };
+		47B3D19012D62727007B9BF2 /* lightbulb.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3D18F12D62727007B9BF2 /* lightbulb.png */; };
 		47CBED9A12D2590B00993604 /* SpotImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBED9912D2590B00993604 /* SpotImage.m */; };
 		47CBED9C12D2591E00993604 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47CBED9B12D2591E00993604 /* CoreLocation.framework */; };
 		47CBEDA012D2592700993604 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47CBED9F12D2592700993604 /* MapKit.framework */; };
@@ -52,6 +57,12 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		474C4D7C12D382AA00F8F2A9 /* UIImage+Resizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resizing.h"; sourceTree = "<group>"; };
 		474C4D7D12D382AA00F8F2A9 /* UIImage+Resizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resizing.m"; sourceTree = "<group>"; };
+		47AB8DB012D61D6400E03E51 /* AboutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
+		47AB8DBE12D620E300E03E51 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		47AB8DBF12D620E300E03E51 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		47B3D18212D626E3007B9BF2 /* world.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = world.png; sourceTree = "<group>"; };
+		47B3D18412D626F6007B9BF2 /* photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photos.png; sourceTree = "<group>"; };
+		47B3D18F12D62727007B9BF2 /* lightbulb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightbulb.png; sourceTree = "<group>"; };
 		47CBED9812D2590B00993604 /* SpotImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotImage.h; sourceTree = "<group>"; };
 		47CBED9912D2590B00993604 /* SpotImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotImage.m; sourceTree = "<group>"; };
 		47CBED9B12D2591E00993604 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -80,6 +91,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				47AB8DBE12D620E300E03E51 /* AboutViewController.h */,
+				47AB8DBF12D620E300E03E51 /* AboutViewController.m */,
 				1D3623240D0F684500981E51 /* igstdAppDelegate.h */,
 				1D3623250D0F684500981E51 /* igstdAppDelegate.m */,
 				28216C950DB411BC00E5133A /* MapViewController.h */,
@@ -139,7 +152,11 @@
 				47CBEDC512D25B2F00993604 /* ImageView.xib */,
 				47CBEDC312D25B2400993604 /* MapView.xib */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
+				47AB8DB012D61D6400E03E51 /* AboutView.xib */,
 				8D1107310486CEB800E47090 /* igstd-Info.plist */,
+				47B3D18212D626E3007B9BF2 /* world.png */,
+				47B3D18412D626F6007B9BF2 /* photos.png */,
+				47B3D18F12D62727007B9BF2 /* lightbulb.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -208,6 +225,10 @@
 				47CBEDC612D25B2F00993604 /* ImageView.xib in Resources */,
 				17F6085512D4A7B700D598AE /* Images in Resources */,
 				17F6085A12D4A7C600D598AE /* Metadata in Resources */,
+				47AB8DB212D61D6400E03E51 /* AboutView.xib in Resources */,
+				47B3D18312D626E3007B9BF2 /* world.png in Resources */,
+				47B3D18512D626F6007B9BF2 /* photos.png in Resources */,
+				47B3D19012D62727007B9BF2 /* lightbulb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +247,7 @@
 				474C4D7E12D382AA00F8F2A9 /* UIImage+Resizing.m in Sources */,
 				17F6081A12D49C1900D598AE /* ImageManager.m in Sources */,
 				17882E7A12D5DF2C00D0159D /* Difference.m in Sources */,
-				17882F2A12D61E4000D0159D /* UITouchImageView.m in Sources */,
+				47AB8DC012D620E300E03E51 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

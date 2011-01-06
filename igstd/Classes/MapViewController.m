@@ -27,6 +27,7 @@
 	for(SpotImage* spotImage in [[ImageManager getImageManager] spotImages]){
 		[mapView addAnnotation:spotImage];
 	}	
+	
 }
 
 
@@ -86,6 +87,7 @@
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
+
 
 
 - (void)dealloc {
