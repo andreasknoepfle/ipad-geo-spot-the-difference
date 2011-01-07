@@ -44,7 +44,7 @@
 	[self resetScrollView];
 	
 	// ImageView mit einem Bild erstellen
-	UITouchImageView *tempImageView = [[UITouchImageView alloc] initWithImage:spotImage.image];
+	UIImageView *tempImageView = [[UIImageView alloc] initWithImage:spotImage.image];
 	[self setImageView: tempImageView];
 	[tempImageView release];
 	
@@ -52,10 +52,22 @@
 	// damit das Bild komplett angezeigt wird
 	imageView.frame = scrollView.bounds; //CGRectMake(0,0, scrollView.contentSize.width, scrollView.contentSize.height);
 	imageView.contentMode = UIViewContentModeScaleAspectFit;
+	imageView.userInteractionEnabled = true;
 	
-	
+	UILongPressGestureRecognizer* longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)]; 
+	[imageView addGestureRecognizer:longPressGesture];
 	
 	[self updateScrollView];
+}
+
+- (void) longPress:(UILongPressGestureRecognizer*)gesture{
+	if (gesture.state == UIGestureRecognizerStateBegan) {
+		NSLog(@"%f", [gesture locationInView:imageView].x);
+		NSLog(@"%f", [gesture locationInView:imageView].y);
+		NSLog(@"-----");
+		NSLog(@"%f", [gesture locationInView:scrollView].x);
+		NSLog(@"%f", [gesture locationInView:scrollView].y);
+	}
 }
 							  
 

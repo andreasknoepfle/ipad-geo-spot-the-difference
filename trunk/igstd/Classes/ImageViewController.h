@@ -8,21 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "SpotImage.h"
-#import "UITouchImageView.h"
 
 
 @interface ImageViewController : UIViewController <UIScrollViewDelegate> {
-	UITouchImageView *imageView;
+	UIImageView *imageView;
 	UIScrollView *scrollView;
 	SpotImage *spotImage;
 }
 
-@property (nonatomic, retain) UITouchImageView *imageView;
+@property (nonatomic, retain) UIImageView *imageView;
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, retain) SpotImage* spotImage;
 
 - (void) updateScrollView;
 - (void) showSpotImage;
 - (void) resetScrollView;
+- (void) longPress:(UILongPressGestureRecognizer*)gesture;
 
 @end
