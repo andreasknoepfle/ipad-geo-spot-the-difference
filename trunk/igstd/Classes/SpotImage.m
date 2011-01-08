@@ -32,8 +32,21 @@
 	return self;
 }
 
+-(bool)doesHitWithX:(int)x andY:(int)y{
+	for(Difference* diff in differences){
+		if (x>= diff.position.x && x<= diff.position.x + diff.size.width &&
+			y >= diff.position.y && y <= diff.position.y + diff.size.height) {
+			return true;
+		}
+	}
+	
+	return false;
+}
+
 -(id) initWithPlist:(NSString *)path{
 	self = [super init];
+	
+	differences = [[NSMutableArray alloc] init];
 	
 	NSDictionary* data = [NSDictionary dictionaryWithContentsOfFile:path];
 	
@@ -55,13 +68,13 @@
 	self.coordinate = region.center;
 	
 	// Fehlerpunkte einlesen
-	NSArray* diffs = [NSArray arrayWithObject:[data objectForKey:@"Differences"]];
+	id diffs = [data objectForKey:@"Differences"];
 	for(NSDictionary *dict in diffs)
 	{
-		int x = [[data objectForKey:@"X"] intValue];
-		int y = [[data objectForKey:@"Y"] intValue];
-		int width = [[data objectForKey:@"Width"] intValue];
-		int height = [[data objectForKey:@"Height"] intValue];
+		int x = [[dict objectForKey:@"X"] intValue];
+		int y = [[dict objectForKey:@"Y"] intValue];
+		int width = [[dict objectForKey:@"Width"] intValue];
+		int height = [[dict objectForKey:@"Height"] intValue];
 		
 		Difference* difference = [[Difference alloc] initWithX:x andY:y andWidth:width andHeight:height];
 		
