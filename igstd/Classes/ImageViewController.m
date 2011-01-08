@@ -24,7 +24,7 @@
 	scrollView.contentSize = CGSizeMake(imageView.frame.size.width, imageView.frame.size.height);
 	scrollView.maximumZoomScale = 2.0;
 	scrollView.minimumZoomScale = 1.0;
-	//scrollView.clipsToBounds = YES;
+	scrollView.clipsToBounds = YES;
 	scrollView.delegate = self;
 	[scrollView addSubview:imageView];
 	
@@ -117,14 +117,21 @@
 	
 	if (gesture.state == UIGestureRecognizerStateBegan) {
 		// Relative Position des Clicks zum ImageView ermitteln
-		int x = [gesture locationInView:imageView].x;
-		int y = [gesture locationInView:imageView].y;
+		int x = [gesture locationInView:scrollView].x;
+		int y = [gesture locationInView:scrollView].y;
 		
 		// Verhaeltnis der Groesse des Originalbildes zum ImageView ermitteln
 		float aspectWidth = spotImage.image.size.width / imageView.frame.size.width;
 		float aspectHeight = spotImage.image.size.height / imageView.frame.size.height; 
-				
-		NSLog(@"%f %f", aspectWidth * x, aspectHeight * y);
+		
+		int absX = aspectWidth * x;
+		int absY = aspectHeight * y;
+		
+		bool hitted = [spotImage doesHitWithX:absX andY:absY];
+		
+		if (hitted) {
+			NSLog(@"Treffer!");
+		}
 	}
 }
 							  

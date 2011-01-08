@@ -23,9 +23,12 @@
 
 -(id)initWithPlist:(NSString*)path;
 
+-(bool) doesHitWithX:(int)x andY:(int)y;
+  
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate; 
 @property (nonatomic, copy) NSString *title; 
 @property (nonatomic, copy) NSString *subtitle;
 @property (nonatomic, copy) UIImage *image;
+@property (nonatomic, retain) NSMutableArray * differences;
 
 @end
