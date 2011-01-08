@@ -22,11 +22,14 @@
 
 - (void) updateScrollView{	
 	scrollView.contentSize = CGSizeMake(imageView.frame.size.width, imageView.frame.size.height);
-	scrollView.maximumZoomScale = 4.0;
-	scrollView.minimumZoomScale = 0.1;
-	scrollView.clipsToBounds = YES;
+	scrollView.maximumZoomScale = 2.0;
+	scrollView.minimumZoomScale = 1.0;
+	//scrollView.clipsToBounds = YES;
 	scrollView.delegate = self;
 	[scrollView addSubview:imageView];
+	
+	// Initial zentrieren
+	[self scrollViewDidZoom:scrollView];
 }
 
 - (void) resetScrollView{
@@ -39,6 +42,36 @@
 	scrollView.bounds = scrollView.frame;
 }
 
+// Zentriert das Image im ScrollView
+-(void)scrollViewDidZoom:(UIScrollView *)pScrollView {
+	CGRect innerFrame = imageView.frame;
+	CGRect scrollerBounds = pScrollView.bounds;
+	
+	if ( ( innerFrame.size.width < scrollerBounds.size.width ) || ( innerFrame.size.height < scrollerBounds.size.height ) )
+	{
+		CGFloat tempx = imageView.center.x - ( scrollerBounds.size.width / 2 );
+		CGFloat tempy = imageView.center.y - ( scrollerBounds.size.height / 2 );
+		CGPoint myScrollViewOffset = CGPointMake( tempx, tempy);
+		
+		pScrollView.contentOffset = myScrollViewOffset;
+		
+	}
+	
+	UIEdgeInsets anEdgeInset = { 0, 0, 0, 0};
+	if ( scrollerBounds.size.width > innerFrame.size.width )
+	{
+		anEdgeInset.left = (scrollerBounds.size.width - innerFrame.size.width) / 2;
+		anEdgeInset.right = -anEdgeInset.left;  // I don't know why this needs to be negative, but that's what works
+	}
+	if ( scrollerBounds.size.height > innerFrame.size.height )
+	{
+		anEdgeInset.top = (scrollerBounds.size.height - innerFrame.size.height) / 2;
+		anEdgeInset.bottom = -anEdgeInset.top;  // I don't know why this needs to be negative, but that's what works
+	}
+	pScrollView.contentInset = anEdgeInset;
+}
+
+
 
 - (void) showSpotImage{	
 	[self resetScrollView];
@@ -48,12 +81,32 @@
 	[self setImageView: tempImageView];
 	[tempImageView release];
 	
-	// Initial das ImageView auf die Groesse des ScrollView setzen,
-	// damit das Bild komplett angezeigt wird
-	imageView.frame = scrollView.bounds; //CGRectMake(0,0, scrollView.contentSize.width, scrollView.contentSize.height);
+	// Seitenverhaeltnis des Bildes ermitteln
+	double aspectRatio = spotImage.image.size.width / spotImage.image.size.height;
+	
+	// Variablen fuer die spaetere Zuweisung des imageView Frames
+	int width = 0;
+	int height = 0;
+	
+	// Je nachdem welche Seite des Bild die groessere ist, wird das 
+	// ImageView an die ScrollView perfekt angepasst
+	if (aspectRatio >1 ) {
+		// Breite > Hoehe
+		width = scrollView.bounds.size.width;
+		height = width / aspectRatio;
+	}
+	else{
+		// Hoehe > Breite
+		height = scrollView.bounds.size.height;
+		width = height * aspectRatio;
+	}
+	
+	
+	imageView.frame = CGRectMake(0,0, width, height);
 	imageView.contentMode = UIViewContentModeScaleAspectFit;
 	imageView.userInteractionEnabled = true;
-	
+	imageView.clipsToBounds = true;
+		
 	UILongPressGestureRecognizer* longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)]; 
 	[imageView addGestureRecognizer:longPressGesture];
 	
@@ -61,12 +114,17 @@
 }
 
 - (void) longPress:(UILongPressGestureRecognizer*)gesture{
+	
 	if (gesture.state == UIGestureRecognizerStateBegan) {
-		NSLog(@"%f", [gesture locationInView:imageView].x);
-		NSLog(@"%f", [gesture locationInView:imageView].y);
-		NSLog(@"-----");
-		NSLog(@"%f", [gesture locationInView:scrollView].x);
-		NSLog(@"%f", [gesture locationInView:scrollView].y);
+		// Relative Position des Clicks zum ImageView ermitteln
+		int x = [gesture locationInView:imageView].x;
+		int y = [gesture locationInView:imageView].y;
+		
+		// Verhaeltnis der Groesse des Originalbildes zum ImageView ermitteln
+		float aspectWidth = spotImage.image.size.width / imageView.frame.size.width;
+		float aspectHeight = spotImage.image.size.height / imageView.frame.size.height; 
+				
+		NSLog(@"%f %f", aspectWidth * x, aspectHeight * y);
 	}
 }
 							  
