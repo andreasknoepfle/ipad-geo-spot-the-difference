@@ -3,66 +3,76 @@
 <plist version="1.0">
 <dict>
 	<key>Title</key>
-	<string>Konstanz</string>
+	<string>Farbenfroh</string>
 	<key>Description</key>
-	<string>Konstanze - die Stadt</string>
+	<string>Europahaus</string>
 	<key>ImagePath</key>
-	<string>0001.jpg</string>
-	<key>Longitude</key>
-	<real>9.181180000305176</real>
+	<string>IMG_2693.jpg</string>
 	<key>Latitude</key>
-	<real>47.66073396981077</real>
+	<real>47.66762719262464</real>
+	<key>Longitude</key>
+	<real>9.164882898330688</real>
 	<key>Differences</key>
 	<array>
 		<dict>
-			<key>Height</key>
-			<integer>97</integer>
-			<key>Width</key>
-			<integer>97</integer>
 			<key>X</key>
-			<integer>317</integer>
+			<integer>1320</integer>
 			<key>Y</key>
-			<integer>450</integer>
+			<integer>2610</integer>
+			<key>Width</key>
+			<integer>313</integer>
+			<key>Height</key>
+			<integer>726</integer>
 		</dict>
 		<dict>
-			<key>Width</key>
-			<integer>20</integer>
-			<key>Height</key>
-			<integer>20</integer>
 			<key>X</key>
-			<integer>1551</integer>
+			<integer>2340</integer>
 			<key>Y</key>
-			<integer>600</integer>
+			<integer>714</integer>
+			<key>Height</key>
+			<integer>246</integer>
+			<key>Width</key>
+			<integer>300</integer>
 		</dict>
 		<dict>
-			<key>Width</key>
-			<integer>20</integer>
-			<key>Height</key>
-			<string>20</string>
 			<key>X</key>
-			<integer>600</integer>
+			<integer>1382</integer>
 			<key>Y</key>
-			<integer>2193</integer>
+			<integer>290</integer>
+			<key>Width</key>
+			<integer>50</integer>
+			<key>Height</key>
+			<integer>60</integer>
 		</dict>
 		<dict>
-			<key>Width</key>
-			<integer>20</integer>
-			<key>Height</key>
-			<integer>20</integer>
 			<key>X</key>
-			<integer>2187</integer>
+			<integer>78</integer>
 			<key>Y</key>
-			<integer>2099</integer>
+			<integer>402</integer>
+			<key>Width</key>
+			<integer>366</integer>
+			<key>Height</key>
+			<integer>432</integer>
 		</dict>
 		<dict>
-			<key>Width</key>
-			<integer>20</integer>
-			<key>Height</key>
-			<integer>20</integer>
 			<key>X</key>
-			<integer>1604</integer>
+			<integer>1356</integer>
 			<key>Y</key>
-			<integer>2922</integer>
+			<integer>402</integer>
+			<key>Width</key>
+			<integer>60</integer>
+			<key>Height</key>
+			<integer>318</integer>
+		</dict>
+		<dict>
+			<key>X</key>
+			<integer>1716</integer>
+			<key>Y</key>
+			<integer>3468</integer>
+			<key>Width</key>
+			<integer>108</integer>
+			<key>Height</key>
+			<integer>438</integer>
 		</dict>
 	</array>
 </dict>

@@ -32,15 +32,15 @@
 	return self;
 }
 
--(bool)doesHitWithX:(int)x andY:(int)y{
+-(Difference*)doesHitWithX:(int)x andY:(int)y{
 	for(Difference* diff in differences){
 		if (x>= diff.position.x && x<= diff.position.x + diff.size.width &&
 			y >= diff.position.y && y <= diff.position.y + diff.size.height) {
-			return true;
+			return diff;
 		}
 	}
 	
-	return false;
+	return nil;
 }
 
 -(id) initWithPlist:(NSString *)path{
