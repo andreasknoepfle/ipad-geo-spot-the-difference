@@ -8,6 +8,7 @@
 
 #import "ImageViewController.h"
 #import "ImageManager.h"
+#import "Difference.h"
 
 
 @implementation ImageViewController
@@ -110,11 +111,13 @@
 	UILongPressGestureRecognizer* longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)]; 
 	[imageView addGestureRecognizer:longPressGesture];
 	
+		
 	[self updateScrollView];
 }
 
 - (void) longPress:(UILongPressGestureRecognizer*)gesture{
 	
+
 	if (gesture.state == UIGestureRecognizerStateBegan) {
 		// Relative Position des Clicks zum ImageView ermitteln
 		int x = [gesture locationInView:scrollView].x;
@@ -127,10 +130,18 @@
 		int absX = aspectWidth * x;
 		int absY = aspectHeight * y;
 		
-		bool hitted = [spotImage doesHitWithX:absX andY:absY];
+		Difference* hitted = [spotImage doesHitWithX:absX andY:absY];
 		
-		if (hitted) {
+		if (hitted!=nil) {
 			NSLog(@"Treffer!");
+			UIGraphicsBeginImageContext(self.imageView.frame.size);
+			CGContextRef ctx= UIGraphicsGetCurrentContext();
+			[self.imageView.image drawInRect:CGRectMake(0,0,self.imageView.frame.size.width,self.imageView.frame.size.height)];
+			CGContextSetRGBFillColor(ctx, 0.0,1.0,0.0,0.5);
+			CGContextFillRect(ctx,CGRectMake(hitted.position.x/aspectWidth,hitted.position.y/aspectHeight,hitted.size.width/aspectWidth,hitted.size.height/aspectHeight));
+			imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+			UIGraphicsEndImageContext();
+			
 		}
 	}
 }

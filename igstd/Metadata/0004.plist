@@ -3,66 +3,66 @@
 <plist version="1.0">
 <dict>
 	<key>Title</key>
-	<string>Konstanzer Münster</string>
+	<string>Imperia</string>
 	<key>Description</key>
-	<string>Münster</string>
+	<string>Statue</string>
 	<key>ImagePath</key>
-	<string>IMG_3281.jpg</string>
+	<string>IMG_3285.jpg</string>
 	<key>Latitude</key>
-	<real>47.66334613147981</real>
+	<real>47.66072132417359</real>
 	<key>Longitude</key>
-	<real>9.175295233726501</real>
+	<real>9.180898368358612</real>
 	<key>Differences</key>
 	<array>
 		<dict>
 			<key>X</key>
-			<integer>1510</integer>
+			<integer>1126</integer>
 			<key>Y</key>
-			<integer>1314</integer>
+			<integer>852</integer>
 			<key>Height</key>
-			<integer>108</integer>
+			<integer>84</integer>
 			<key>Width</key>
-			<integer>103</integer>
+			<integer>98</integer>
 		</dict>
 		<dict>
 			<key>X</key>
-			<integer>1620</integer>
+			<integer>925</integer>
 			<key>Y</key>
-			<integer>2024</integer>
+			<integer>277</integer>
 			<key>Width</key>
-			<integer>82</integer>
+			<integer>35</integer>
 			<key>Height</key>
-			<integer>135</integer>
+			<integer>37</integer>
 		</dict>
 		<dict>
 			<key>X</key>
-			<integer>766</integer>
+			<integer>410</integer>
 			<key>Y</key>
-			<integer>637</integer>
+			<integer>427</integer>
 			<key>Width</key>
-			<integer>102</integer>
+			<integer>62</integer>
 			<key>Height</key>
-			<integer>220</integer>
+			<integer>35</integer>
 		</dict>
 		<dict>
 			<key>X</key>
-			<integer>653</integer>
+			<integer>858</integer>
 			<key>Y</key>
-			<integer>2567</integer>
+			<integer>485</integer>
 			<key>Width</key>
-			<integer>92</integer>
+			<integer>34</integer>
 			<key>Height</key>
-			<integer>818</integer>
+			<integer>41</integer>
 		</dict>
 		<dict>
 			<key>X</key>
-			<integer>24</integer>
+			<integer>832</integer>
 			<key>Y</key>
-			<integer>3414</integer>
+			<integer>967</integer>
 			<key>Width</key>
-			<integer>264</integer>
+			<integer>64</integer>
 			<key>Height</key>
-			<integer>462</integer>
+			<integer>65</integer>
 		</dict>
 	</array>
 </dict>

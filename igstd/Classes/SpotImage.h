@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Foundation/NSKeyedArchiver.h>
 #import <MapKit/MapKit.h>
+#import "Difference.h"
 
 
 @interface SpotImage : NSObject <MKAnnotation> {
@@ -23,7 +24,7 @@
 
 -(id)initWithPlist:(NSString*)path;
 
--(bool) doesHitWithX:(int)x andY:(int)y;
+-(Difference *) doesHitWithX:(int)x andY:(int)y;
   
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate; 
 @property (nonatomic, copy) NSString *title; 

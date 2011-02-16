@@ -3,66 +3,66 @@
 <plist version="1.0">
 <dict>
 	<key>Title</key>
-	<string>Konstanzer Münster</string>
+	<string>Altes Haus</string>
 	<key>Description</key>
-	<string>Münster</string>
+	<string>Fahradstraße</string>
 	<key>ImagePath</key>
-	<string>IMG_3281.jpg</string>
+	<string>IMG_3278.jpg</string>
 	<key>Latitude</key>
-	<real>47.66334613147981</real>
+	<real>47.66220806881211</real>
 	<key>Longitude</key>
-	<real>9.175295233726501</real>
+	<real>9.170836061239243</real>
 	<key>Differences</key>
 	<array>
 		<dict>
 			<key>X</key>
-			<integer>1510</integer>
+			<integer>1632</integer>
 			<key>Y</key>
-			<integer>1314</integer>
+			<integer>510</integer>
 			<key>Height</key>
-			<integer>108</integer>
+			<integer>156</integer>
 			<key>Width</key>
-			<integer>103</integer>
+			<integer>126</integer>
 		</dict>
 		<dict>
 			<key>X</key>
-			<integer>1620</integer>
+			<integer>648</integer>
 			<key>Y</key>
-			<integer>2024</integer>
+			<integer>2016</integer>
 			<key>Width</key>
-			<integer>82</integer>
+			<integer>336</integer>
 			<key>Height</key>
-			<integer>135</integer>
+			<integer>78</integer>
 		</dict>
 		<dict>
 			<key>X</key>
-			<integer>766</integer>
+			<integer>737</integer>
 			<key>Y</key>
-			<integer>637</integer>
+			<integer>1634</integer>
 			<key>Width</key>
-			<integer>102</integer>
+			<integer>118</integer>
 			<key>Height</key>
-			<integer>220</integer>
+			<integer>88</integer>
 		</dict>
 		<dict>
 			<key>X</key>
-			<integer>653</integer>
+			<integer>1296</integer>
 			<key>Y</key>
-			<integer>2567</integer>
+			<integer>1581</integer>
 			<key>Width</key>
-			<integer>92</integer>
+			<integer>54</integer>
 			<key>Height</key>
-			<integer>818</integer>
+			<integer>132</integer>
 		</dict>
 		<dict>
 			<key>X</key>
-			<integer>24</integer>
+			<integer>1244</integer>
 			<key>Y</key>
-			<integer>3414</integer>
+			<integer>1968</integer>
 			<key>Width</key>
-			<integer>264</integer>
+			<integer>48</integer>
 			<key>Height</key>
-			<integer>462</integer>
+			<integer>52</integer>
 		</dict>
 	</array>
 </dict>

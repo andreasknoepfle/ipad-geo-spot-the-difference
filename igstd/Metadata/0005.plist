@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Title</key>
+	<string>HTWG Bibliothek</string>
+	<key>Description</key>
+	<string>HTWG Konstanz</string>
+	<key>ImagePath</key>
+	<string>IMG_3270.jpg</string>
+	<key>Latitude</key>
+	<real>47.66796677231774</real>
+	<key>Longitude</key>
+	<real>9.170891046524048</real>
+	<key>Differences</key>
+	<array>
+		<dict>
+			<key>X</key>
+			<integer>956</integer>
+			<key>Y</key>
+			<integer>816</integer>
+			<key>Height</key>
+			<integer>276</integer>
+			<key>Width</key>
+			<integer>216</integer>
+		</dict>
+		<dict>
+			<key>X</key>
+			<integer>455</integer>
+			<key>Y</key>
+			<integer>523</integer>
+			<key>Width</key>
+			<integer>179</integer>
+			<key>Height</key>
+			<integer>237</integer>
+		</dict>
+		<dict>
+			<key>X</key>
+			<integer>1801</integer>
+			<key>Y</key>
+			<integer>358</integer>
+			<key>Width</key>
+			<integer>78</integer>
+			<key>Height</key>
+			<integer>102</integer>
+		</dict>
+	</array>
+</dict>
+</plist>
