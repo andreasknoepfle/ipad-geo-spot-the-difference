@@ -13,13 +13,23 @@
 
 @implementation ImageViewController
 
-@synthesize scrollView, imageView, spotImage;
+@synthesize scrollView, imageView, spotImage, foundDiffs,allDiffs, foundDiffsArray,backupImage;
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	foundDiffsArray=[[NSMutableArray alloc] init];
 }	
+
+// Diesen View als First Responder deklarieren
+- (BOOL) canBecomeFirstResponder {
+	return YES;
+}
+-(void) viewDidAppear:(BOOL)animated {
+	[self becomeFirstResponder];	
+	
+}
 
 - (void) updateScrollView{	
 	scrollView.contentSize = CGSizeMake(imageView.frame.size.width, imageView.frame.size.height);
@@ -110,9 +120,17 @@
 		
 	UILongPressGestureRecognizer* longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)]; 
 	[imageView addGestureRecognizer:longPressGesture];
-	
+	[foundDiffsArray removeAllObjects];
+	[foundDiffs setText: [NSString stringWithFormat:@"%i",[foundDiffsArray count]]];
+	[allDiffs setText: [NSString stringWithFormat:@"%i",[spotImage.differences count]]];
 		
 	[self updateScrollView];
+	UIGraphicsBeginImageContext(self.imageView.frame.size);
+	[self.imageView.image drawInRect:CGRectMake(0,0,self.imageView.frame.size.width,self.imageView.frame.size.height)];
+	backupImage = UIGraphicsGetImageFromCurrentImageContext();
+	[backupImage retain];
+	UIGraphicsEndImageContext();
+
 }
 
 - (void) longPress:(UILongPressGestureRecognizer*)gesture{
@@ -133,15 +151,25 @@
 		Difference* hitted = [spotImage doesHitWithX:absX andY:absY];
 		
 		if (hitted!=nil) {
-			NSLog(@"Treffer!");
-			UIGraphicsBeginImageContext(self.imageView.frame.size);
-			CGContextRef ctx= UIGraphicsGetCurrentContext();
-			[self.imageView.image drawInRect:CGRectMake(0,0,self.imageView.frame.size.width,self.imageView.frame.size.height)];
-			CGContextSetRGBFillColor(ctx, 0.0,1.0,0.0,0.5);
-			CGContextFillRect(ctx,CGRectMake(hitted.position.x/aspectWidth,hitted.position.y/aspectHeight,hitted.size.width/aspectWidth,hitted.size.height/aspectHeight));
-			imageView.image = UIGraphicsGetImageFromCurrentImageContext();
-			UIGraphicsEndImageContext();
-			
+			int index =[foundDiffsArray indexOfObject:hitted];
+			//Nur wenn noch nicht schon gehitted
+			if(index==NSNotFound) { 
+				//Treffer 
+				// Loesche alte Tipps durch Backup
+				self.imageView.image = self.backupImage;
+				UIGraphicsBeginImageContext(self.imageView.frame.size);
+				//Zeichne Rechteck
+				CGContextRef ctx= UIGraphicsGetCurrentContext();
+				[self.imageView.image drawInRect:CGRectMake(0,0,self.imageView.frame.size.width,self.imageView.frame.size.height)];
+				CGContextSetRGBFillColor(ctx, 0.0,1.0,0.0,0.5);
+				CGContextFillRect(ctx,CGRectMake(hitted.position.x/aspectWidth,hitted.position.y/aspectHeight,hitted.size.width/aspectWidth,hitted.size.height/aspectHeight));
+				imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+				backupImage = UIGraphicsGetImageFromCurrentImageContext();
+				[backupImage retain];
+				UIGraphicsEndImageContext();
+				[foundDiffsArray addObject:hitted];
+				[foundDiffs setText: [NSString stringWithFormat:@"%i",[foundDiffsArray count]]];
+			}
 		}
 	}
 }
@@ -169,15 +197,75 @@
 }
 
 - (void)viewDidUnload {
+	
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
 
 
 - (void)dealloc {
+	[backupImage release];
 	[scrollView release];
 	[imageView release];
     [super dealloc];
+}
+
+// Schuetteln fuer Tipps
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+	// Verhaeltnis der Groesse des Originalbildes zum ImageView ermitteln
+	float aspectWidth = spotImage.image.size.width / imageView.frame.size.width;
+	float aspectHeight = spotImage.image.size.height / imageView.frame.size.height; 
+	
+	if (event.type == UIEventSubtypeMotionShake) {
+		for(Difference* diff in spotImage.differences){
+			int index =[foundDiffsArray indexOfObject:diff];
+			//Nur nicht gefundene Fehler
+			if(index==NSNotFound) { 
+				//Image ohne Tipp laden
+				self.imageView.image = self.backupImage;
+				UIGraphicsBeginImageContext(self.imageView.frame.size);
+				
+				[self.imageView.image drawInRect:CGRectMake(0,0,self.imageView.frame.size.width,self.imageView.frame.size.height)];
+				
+				CGContextRef ctx= UIGraphicsGetCurrentContext();
+				
+								
+				// Einen zufaelligen Rahmen um den Unterschied ziehen
+				int randx=diff.position.x-(arc4random()%10)*spotImage.image.size.width/20;
+				if(randx<0)
+					randx=0;
+				int randy=diff.position.y-(arc4random()%10)*spotImage.image.size.height/20;
+				if(randy<0)
+					randy=0;
+				
+				
+				
+				int randw=diff.size.width+(diff.position.x-randx)+(arc4random()%10)*spotImage.image.size.width/20;
+				if((randx+randw)>spotImage.image.size.width)
+					randw=spotImage.image.size.width-randx;
+				
+				
+				int randh=diff.size.height+(diff.position.y-randy)+(arc4random()%10)*spotImage.image.size.height/20;
+				if((randy+randh)>spotImage.image.size.height)
+					randh=spotImage.image.size.height-randy;
+				
+				int x=randx/aspectWidth;
+				int y=randy/aspectHeight;
+				int w=randw/aspectWidth;
+				int h=randh/aspectHeight;
+				CGContextSetLineWidth(ctx, 1);
+				CGContextSetRGBStrokeColor(ctx, 1.0,1.0,1.0,1.0);
+				CGContextStrokeRect(ctx,CGRectMake(x,y,w,h));
+				CGContextSetRGBStrokeColor(ctx, 0,0,0,1.0);
+				CGContextStrokeRect(ctx,CGRectMake(x-1,y-1,w-1,h-1));
+				imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+				
+				//Nur einen Tipp geben
+				UIGraphicsEndImageContext();
+				break;
+			}
+		}
+	}
 }
 
 @end
