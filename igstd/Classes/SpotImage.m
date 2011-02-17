@@ -12,7 +12,7 @@
 
 @implementation SpotImage
 
-@synthesize coordinate,title,subtitle,image;
+@synthesize coordinate,title,subtitle,image,differences;
 
 
 -(id)initWithLongitude:(double)_longitude andLatitude:(double)_latitude andTitle:(NSString *)_title 
@@ -52,7 +52,7 @@
 	
 	// Beschriftung einlesen
 	self.title = [data objectForKey:@"Title"];
-	self.subtitle = [data objectForKey:@"Description"];
+	//self.subtitle = [data objectForKey:@"Description"];
 
 	// Bild einlesen
 	NSString* imagePath = [[[NSBundle mainBundle]  resourcePath] stringByAppendingString:@"/Images/"];
@@ -80,7 +80,7 @@
 		
 		[differences addObject:difference];
 	}
-	
+	self.subtitle = [NSString stringWithFormat:@"%i Unterschiede",[differences count]];
 	return self;
 }
 
