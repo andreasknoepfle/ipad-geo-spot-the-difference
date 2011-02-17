@@ -27,7 +27,17 @@
 	for(SpotImage* spotImage in [[ImageManager getImageManager] spotImages]){
 		[mapView addAnnotation:spotImage];
 	}	
+	CLLocationCoordinate2D location;
+	MKCoordinateRegion region;
+	MKCoordinateSpan span;
+	span.latitudeDelta= 0.1;
+	span.longitudeDelta = 0.1;
+	location.latitude = 47.66220806881211;
+	location.longitude = 9.170836061239243;
+	region.center = location;
+	region.span = span;
 	
+	[mapView setRegion: region animated: TRUE]; 
 }
 
 
