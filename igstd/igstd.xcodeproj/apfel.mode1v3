@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>47601E34130D6415000EE0F4</string>
+						<string>47601E3A130D6893000EE0F4</string>
 						<key>history</key>
 						<array>
 							<string>47601C8B130C097D000EE0F4</string>
@@ -317,8 +317,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
-									<integer>1</integer>
+									<integer>19</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -342,7 +341,7 @@
 							<real>240</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>-4 146 1280 856 0 0 1280 1002 </string>
+						<string>19 146 1280 856 0 0 1280 1002 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -372,7 +371,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>47601E33130D6415000EE0F4</string>
+										<string>47601E39130D6893000EE0F4</string>
 										<key>history</key>
 										<array>
 											<string>47CBEDD112D2615B00993604</string>
@@ -416,7 +415,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1018, 491}}</string>
 								<key>RubberWindowFrame</key>
-								<string>-4 146 1280 856 0 0 1280 1002 </string>
+								<string>19 146 1280 856 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -436,7 +435,7 @@
 								<key>Frame</key>
 								<string>{{0, 496}, {1018, 319}}</string>
 								<key>RubberWindowFrame</key>
-								<string>-4 146 1280 856 0 0 1280 1002 </string>
+								<string>19 146 1280 856 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -610,7 +609,7 @@
 		<string>/Users/apfel/ipad-geo-spot-the-difference/igstd/igstd.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>-4 146 1280 856 0 0 1280 1002 </string>
+	<string>19 146 1280 856 0 0 1280 1002 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
