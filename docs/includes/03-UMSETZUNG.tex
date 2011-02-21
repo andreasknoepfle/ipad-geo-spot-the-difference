@@ -1,1 +1,81 @@
- 
+Die Umsetzung der verschiedenen Views und Controller werden im folgenden erklärt.
+
+\subsection{Struktur der Bild- und Fehlerdaten}
+Für jedes Fehlerbild ist es nötig den Titel, eine Beschreibung, der geographischen Koordinaten, sowie die Position der Fehler festzuhalten. Gespeichert werden diese
+Daten pro Fehlerbild in einer separaten Property List im Ordner ''Metadata''. Jede plist erhält daher noch den Pfad zum dazugehörigen Fehlerbild (im Ordner ''Images'').\\
+Da ein Fehlerbild mehrere Fehler beinhalten kann, werden diese in einem Array innerhalb
+der plist definiert. Jeder Fehler ist durch eine xy-Koordinate und einer Höhen- und Breiteninformation definiert.
+
+\begin{lstlisting}[caption=Ausschnitt aus einer plist]{plist}
+<dict>
+	<key>Title</key>
+	<string>Farbenfroh</string>
+	<key>Description</key>
+	<string>Europahaus</string>
+	<key>ImagePath</key>
+	<string>IMG_2693.jpg</string>
+	<key>Latitude</key>
+	<real>47.66762719262464</real>
+	<key>Longitude</key>
+	<real>9.164882898330688</real>
+	<key>Differences</key>
+	<array>
+		<dict>
+			<key>X</key>
+			<integer>1320</integer>
+			<key>Y</key>
+			<integer>2610</integer>
+			<key>Width</key>
+			<integer>313</integer>
+			<key>Height</key>
+			<integer>726</integer>
+		</dict>
+		<dict>
+			<key>X</key>
+			<integer>2340</integer>
+			<key>Y</key>
+			<integer>714</integer>
+			<key>Height</key>
+			<integer>246</integer>
+			<key>Width</key>
+			<integer>300</integer>
+		</dict>
+	</array>
+</dict>
+\end{lstlisting}
+
+Eingelesen werden die plists beim erstmaligen Aufruf der init-Funktion des ''ImageManager'', welcher als Singleton implementiert ist. 
+
+\subsection{Map Ansicht}
+
+\subsection{Fehlerbild Ansicht} 
+In der Fehlerbild-Ansicht wird das gewählte Bild der Map-Ansicht angezeigt. Der Spieler kann durch Klicks die gefundenen Fehler in dieser Ansicht aufdecken.
+\subsubsection{Allgemeiner Aufbau}
+Für die Fehlerbild-Ansicht war es nötig, dass das Bild vom Spieler vergrößert und verschoben werden kann.
+Im Gegensatz zu einem statisch an die Bildschirmgröße angepasstes Bild, lassen sich die Fehler besser erkennen.
+Dieses Problem wurde mittels eines UIScrollView und einem darin platzierten UIImage gelöst.
+Das Bild lässt sich somit per ''Pinch to Zoom'' vergrößern oder verkleinern, wie auch im vergrößerten Zustand verschieben.\\
+\\
+Bei der automatischen Anpassung des Bildes mittels des UIScrollView gibt es aber einige Darstellungsprobleme.
+So wird das Bild zu beginn bzw. wenn dieses kleiner ist als der Bildschirm, nicht innerhalb der UIScrollView zentriert.
+Dazu wird per Delegate bei jedem Zoom der UIScrollView (scrollViewDidZoom) die Offsets für ein zentriertes Bild neu berechnet.\\
+Ein weiteres Problem stellen unterschiedlich Große Bilder, wie auch verschiedene Seitenverältnisse dar. Besitzt die UIScrollView
+nicht die selben Maße wie das Bild, so entstehen schwarze Ränder außerhalb des Bildes, oder das Bild wird abgeschnitten.
+Um dies zu verhindern, wird beim Anzeigen des Bildes (showSpotImage) das UIScrollView entsprechend angepasst.\\
+
+\subsubsection{Fehlererkennung}
+Um einen Fehler aufzudecken, muss der Spieler einen langen Klick auf die jeweilige Stelle auf dem Bild tätigen.
+Bei einem einfachen Klick wäre die Gefahr zu größ gewesen, dass ausversehen Klicks ausgeführt werden.\\
+Da aber die Möglichkeit besteht das Bild zu vergrößern und zu verschieben, kann man die erhaltenen Koordinaten
+des Klicks nicht 1:1 übernehmen. Die Koordinaten beziehen sich nämlich auf die aktuelle Größe des Bildes. So kann bei
+einem verkleinerten Bild die rechte untere Ecke die Koordinaten (100,100) besitzen, bei einer starken Vergrößerung
+jedoch (500,500). Daher muss diese Koordinaten in der Funktion longPress anhand dem Verhältnis der dargestellten
+Bildgröße und der originalen Bildgröße korrigiert werden.\\
+Für die eigentliche Fehlererkennung, wird die Funktion ''doesHitWithXandY'' des dargstellten SpotImage aufgerufen. Durch
+die Übergabe der korrigierten Klick-Koordinate erhält man ein boolschen Wert zurück, der angibt, ob man einen Fehler getroffen hat.\\
+Danach wird ggf. gefundene Fehler im Bild mit einem Rechteck markiert und Anzahl der gefundenen Fehler inkrementiert.
+
+\subsubsection{Hilfestellung}
+Da es auch mal vorkomme kann, dass der Spieler auch nach langem Suchen die Fehler nicht findet,
+so wird durch Schütteln des iPads eine Hilfestellung angeboten. Um einen der Fehler wird dazu ein Rahmen mit zufälliger Größe gespannt, der den Fehler eingrenzt.
+
