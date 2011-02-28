@@ -1,8 +1,53 @@
 Im folgenden werden die verschiedenen Benutzeroberflächen gezeigt und die grundlegende Architektur festgelegt.
 
 \subsection{Benutzerschnittstellen}
+Die Benutzerschnittstelle beinhaltet folgende Ansichten:
+\begin{itemize}
+  \item Kartenansicht
+  \item Fehlerbildansicht
+  \item Hilfeansicht
+\end{itemize}
+
+\subsubsection{Kartenansicht}
+In der Kartenansicht \ref{mapviewscreen} werden dem Benutzer alle Fehlerbilder
+als Pin auf einer Weltkarte angezeigt. Er hat die Möglichkeit ein Fehlerbild auszuwählen. Dieses
+wird ihm dann als Miniaturbild mit der Anzahl der darin enthaltenen Fehlern und
+des Titels angezeigt.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{bilder/screen1.jpg}
+  \caption{Kartenansicht}
+  \label{mapviewscreen}
+\end{figure}
+
+\subsubsection{Bildansicht}
+In der Bildansicht \ref{imageviewscreen1} wird dem Benutzer das fehlerhafte Bild
+angezeigt. Durch die bereits aus anderen Anwendung bekannte Zoom-Geste kann das Bild vergrößert und
+verkleinert werden. Durch langes Drücken auf die Stelle an der der Fehler ist
+wird der Bereich grün eingefärbt und der Fehler wird gewertet. Ein langes
+Drücken auf eine andere Stelle bewirkt nichts. Durch eine Schüttelgeste wird
+ein Rahmen auf dem Bild gezeichnet, der einen Bereich mit einem Fehler
+umschließt \ref{imageviewscreen3}.
 
 
+ \begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{bilder/screen2.jpg}
+  \caption{Bildansicht - normal}
+  \label{imageviewscreen1}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{bilder/screen3.jpg}
+  \caption{Bildansicht - vergrößertes Bild}
+  \label{imageviewscreen2}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{bilder/screen4.jpg}
+  \caption{Bildansicht - Fehlerhinweis}
+  \label{imageviewscreen3}
+\end{figure}
 
 \subsection{Architektur}
 Das Klassendiagramm (siehe Abbildung \ref{uml}) zeigt den Aufbau der Anwendung. Die einzelnen Klassen und deren Funktionen sind im folgenden erklärt.
