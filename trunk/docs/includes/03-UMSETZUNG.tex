@@ -46,12 +46,24 @@ der plist definiert. Jeder Fehler ist durch eine xy-Koordinate und einer Höhen-
 
 Eingelesen werden die plists beim erstmaligen Aufruf der init-Funktion des ''ImageManager'', welcher als Singleton implementiert ist. 
 
-\subsection{Map Ansicht}
-
-\subsection{Fehlerbild Ansicht} 
-In der Fehlerbild-Ansicht wird das gewählte Bild der Map-Ansicht angezeigt. Der Spieler kann durch Klicks die gefundenen Fehler in dieser Ansicht aufdecken.
+\subsection{Kartenansicht}
+Die Kartenansicht besteht aus einem MKMapView-Element in das für jedes
+vorhandene SpotImage eine Annotation in der Karte erzeugt wird. Der wichtigste
+Teil dabei ist für die einzelnen Annotationen jeweils einen MKAnnotationView zu
+erzeugen, damit sie angezeigt werden können (viewForAnnotation-Methode). In
+diesem Fall wurde für die Spotimages ein MKPinAnnotationView gewählt, der die Annotationen als Pins auf
+der Karte anzeigt. Über die sogennanten AccessoryViews im MKPinAnnotationView
+kann auch definiert werden wie eine ausgewählte Annotation aussehen soll. Hier
+wird für den leftCalloutAccessoryView, also den View links des Bildtitels, ein
+Vorschaubild des Fehlerbilds angezeigt. Das Vorschaubild wird durch eine
+Erweiterung der Klasse UIImage (UIImage+Resize) erzeugt. Für den
+rightCalloutAccessoryView wird ein Button angezeigt der den Benutzer zum
+Fehlerbild führt. 
+\subsection{Fehlerbildansicht} 
+In der Fehlerbildansicht wird das gewählte Bild der Kartenansicht angezeigt. Der
+Spieler kann durch Klicks die gefundenen Fehler in dieser Ansicht aufdecken.
 \subsubsection{Allgemeiner Aufbau}
-Für die Fehlerbild-Ansicht war es nötig, dass das Bild vom Spieler vergrößert und verschoben werden kann.
+Für die Fehlerbildansicht war es nötig, dass das Bild vom Spieler vergrößert und verschoben werden kann.
 Im Gegensatz zu einem statisch an die Bildschirmgröße angepasstes Bild, lassen sich die Fehler besser erkennen.
 Dieses Problem wurde mittels eines UIScrollView und einem darin platzierten UIImage gelöst.
 Das Bild lässt sich somit per ''Pinch to Zoom'' vergrößern oder verkleinern, wie auch im vergrößerten Zustand verschieben.\\
